@@ -3,6 +3,7 @@ Vigenere Cipher Encoder
 Input:
 - A Message (letters [a-z] and [A-Z])
 - A Keyword (letters [a-z] and [A-Z])
+- A Mode (encrypt (e) or decrypt (d))
 
 Output:
 - Encoded Message (each letter shifted over by corresponding letter in the keyword)
@@ -21,6 +22,22 @@ def main():
     keyword = input("Keyword: ")
     keyword = clean_string_input(keyword)  # clean keyword to contain only letters
 
+    # get encrypt vs. decrypt from user
+    encrypt_in = input("Encrypt ('e') or decrypt ('d')?: ").lower()
+    encrypt_terms = ["e", "encrypt", "encript", "0"]
+    decrypt_terms = ["d", "decrypt", "decript", "1"]
+    # try again on input if the user enters something wrong
+    while (encrypt_in not in encrypt_terms) and (encrypt_in not in decrypt_terms):
+        print('invalid mode. try again.')
+        encrypt_in = input("Encrypt ('e') or decrypt ('d')?: ").lower()
+    # translate string to encrypt/decrypt mode
+    # this is equivalent to "encrypt = encrypt in encrypt_terms" - can you see why?
+    if encrypt_in in encrypt_terms:
+        encrypt = True
+    elif encrypt_in in decrypt_terms:
+        encrypt = False
+    else:
+        encrypt = False
     
     ### Encoding
 
@@ -36,7 +53,10 @@ def main():
         int_k = to_int(k)
 
         # sum of letter + key_letter = cipher_letter
-        int_c = int_l + int_k  # letter + key_letter
+        if encrypt:
+            int_c = int_l + int_k  # letter + key_letter
+        else:
+            int_c = int_l - int_k  # cipher_letter - key_letter to decrypt
         c = from_int(int_c)  # covert number to enciphered letter
 
         # add enciphered letter to the new message
@@ -44,15 +64,23 @@ def main():
 
         # print steps to the user
         if verbose:
+            if encrypt:
+                op = "+"
+            else:
+                op = "-"
             # print(f"Encoding {l} ({int_l}) by shift {k} {int_k}")
-            print(f"{l} + {k} -> {c} ({int_l} + {int_k} -> {int_c % 26})")
+            print(f"{l} {op} {k} -> {c} ({int_l} {op} {int_k} -> {int_c % 26})")
             # print(f"> {c_text}", end="\n\n")
 
     ### Output
 
     # print msg and ciphertext
-    print("Plaintext: ", msg)
-    print("Ciphertext:", c_text)
+    if encrypt:
+        print("Plaintext: ", msg)
+        print("Ciphertext:", c_text)
+    else:
+        print("Ciphertext:", msg)
+        print("Plaintext: ", c_text)
 
 
 ### Helper Functions
