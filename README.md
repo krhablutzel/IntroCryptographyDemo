@@ -16,7 +16,7 @@ Introduction to cryptography. No coding experience required; introduces students
 ## Codebreaking Challenge
 Work together in teams to decrypt 10 secret messages.
 
-Allowed resources:
+#### Allowed resources:
 - All provided code and slides (workshop materials: https://github.com/krhablutzel/introcryptographydemo)
 - Informational websites on each of these ciphers
 Disallowed resources:
@@ -27,82 +27,82 @@ You will have a Bank of America volunteer and a SIP TA in your breakout room. Th
 ### Challenge Questions
 
 ### Question 1
-Decode the following message with a Rail-Fence Cipher with 3 rails:
+Decode the following message with a Rail-Fence Cipher with 3 rails:  
 GETALD AHRNHFRILTAN TOEHAW
 
 Answer: 
 
 ### Question 2
-Decode the following message with a Caesar Cipher with a shift of 3:
+Decode the following message with a Caesar Cipher with a shift of 3:  
 PHHWP HDWIU HHGRP SDUND WQRRQ
 
 Answer: 
 
 ### Question 3
-Decode the following message with a Vigenère Cipher with a keyword of “MOVE”:
+Decode the following message with a Vigenère Cipher with a keyword of “MOVE”:  
 NFDRS GPTBZ DIEHJ XTSAS GFOLI OMH
 
 Answer: 
 
 ### Question 4
-Decode the following message with a Caesar Cipher:
+Decode the following message with a Caesar Cipher:  
 EPOIA DEEIP DALNK XHAIE POIA
 
-Answer: 
+Answer:   
 Method: 
 
 ### Question 5
-You’ve intercepted the following Vigenère ciphertext:
+You’ve intercepted the following Vigenère ciphertext:  
 YIBQK GLAVL YNBQY QQVYJ TYPYM MXLJG LBNPF SHPRM XLNVL AHGUC WPRAG FA
 
-Your informants tell you the message starts with “GOOD MORNING”.
+Your informants tell you the message starts with “GOOD MORNING”.  
 What is the keyword? What is the full message?
 
-Answer (keyword): 
+Answer (keyword):   
 Answer (message): 
 
 ### Question 6
-Decode the following message:
+Decode the following message:  
 VRWCV DBNDV DYCXF WFNMW NBMJH ORENY V
 
-Answer: 
+Answer:    
 Method: 
 
 ### Question 7
-Decode the following message:
+Decode the following message:   
 WECRE ERDSO EELAE AIVDV
 
-Answer: 
+Answer:    
 Method:
 
 ### Question 8
-You’ve intercepted the following ciphertext:
+You’ve intercepted the following ciphertext:   
 ADAXW DETXS DCIVT IWPRZ TSXUN DJGTG TPSXC VIWXH EATPH THIDE
 
-Your informants tell you the message ends with “STOP”.
+Your informants tell you the message ends with “STOP”.   
 What is the full message?
 
-Answer: 
+Answer:    
 Method: 
 
 ### Question 9
-You’ve intercepted the following ciphertext:
+You’ve intercepted the following ciphertext:    
 NBREN UVWYF WXJNE ZERJG VUHVX BGDII VIHK
 
-Your informants tell you characters 8 to 19 in the message are “CLOCKSTRIKES”.
+Your informants tell you characters 8 to 19 in the message are “CLOCKSTRIKES”.   
 What is the full message?
 
-Answer: 
+Answer:    
 Method: 
 
 
 ### Question 10
-You’ve intercepted the following ciphertext:
-WWAKTE EWHERT NOWWME KOAWEU ONHTAB NTBWAY
+You’ve intercepted the following ciphertext:     
+WWAKTE EWHERT NOWWME KOAWEU ONHTAB NTBWAY   
 
-Your informants tell you the first words in the message are “WE KNOW”.
+Your informants tell you the first words in the message are “WE KNOW”.   
 What is the full message?
 
-Answer: 
+Answer:     
 Method: 
 
