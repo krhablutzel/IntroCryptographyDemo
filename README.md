@@ -76,7 +76,7 @@ Answer:
 Shift: 
 
 ### Question 9
-Decode the following message with a Vigenère Cipher with a keyword of "YELLOW":
+Decode the following message with a Vigenère Cipher with a keyword of "YELLOW":  
 JSZVO PRLPD HWPW
 
 Answer:  
