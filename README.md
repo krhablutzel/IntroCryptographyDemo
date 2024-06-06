@@ -66,7 +66,7 @@ Decode the following message with a Caesar Cipher:
 EPOIA DEEIP DALNK XHAIE POIA
 
 Answer:   
-Method: 
+Shift: 
 
 ### Question 8
 Decode the following message with a Caesar Cipher:  
