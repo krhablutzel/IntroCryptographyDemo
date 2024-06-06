@@ -26,19 +26,19 @@ Use your new codebreaking knowledge to solve the challenges below!
 ### Challenge Questions
 
 ### Question 1
-Encode the following message with a Caesar Cipher with a shift of 25:
+Encode the following message with a Caesar Cipher with a shift of 25:  
 TAKE ME TO THE RIVER AT DAWN
 
 Ciphertext:
 
 ### Question 2
-Encode the following message with a Vigenere Cipher with a keyword of "ERR":
+Encode the following message with a Vigenere Cipher with a keyword of "ERR":  
 TO ERR IS HUMAN
 
 Ciphertext:
 
 ### Question 3
-Encode the following message with a Rail Fence Cipher with 3 rails:
+Encode the following message with a Rail Fence Cipher with 3 rails:  
 SAMPLE RECOVERED SUCCESSFULLY
 
 Ciphertext:
@@ -79,7 +79,7 @@ Shift:
 Decode the following message with a Vigenère Cipher with a keyword of "YELLOW":
 JSZVO PRLPD HWPW
 
-Answer:
+Answer:  
 
 ### Question 10
 Decode the following message with a Rail-Fence Cipher with 3 rails:   
@@ -88,13 +88,13 @@ WECRE ERDSO EELAE AIVDV
 Answer: 
 
 ### Question 11
-You've intercepted the following Caesar ciphertext:
+You've intercepted the following Caesar ciphertext:  
 NYRKV MVIYV JRPJU FEFKK ILJKY ZD
 
-Your informants tell you the message starts with "WHAT".
+Your informants tell you the message starts with "WHAT".  
 What is the shift? What is the full message?
 
-Answer (shift):
+Answer (shift):  
 Answer (message):
 
 ### Question 12
