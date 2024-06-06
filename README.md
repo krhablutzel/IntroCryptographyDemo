@@ -14,44 +14,90 @@ Introduction to cryptography. No coding experience required; introduces students
 6. The code will output your encrypted message. Congrats! You're ready to share secret messages!
 
 ## Codebreaking Challenge
-Work together in teams to decrypt 10 secret messages.
+Use your new codebreaking knowledge to solve the challenges below!
 
 #### Allowed resources:
 - All provided code and slides (workshop materials: https://github.com/krhablutzel/introcryptographydemo)
+- Collaboration with peers
 - Informational websites on each of these ciphers
-Disallowed resources:
+#### Disallowed resources:
 - Codebreaking tools with capacity beyond that provided in the workshop materials
-
-You will have a Bank of America volunteer and a SIP TA in your breakout room. They can confirm when your answers are correct, but they are not allowed to give other hints.
 
 ### Challenge Questions
 
 ### Question 1
+Encode the following message with a Caesar Cipher with a shift of 25:
+TAKE ME TO THE RIVER AT DAWN
+
+Ciphertext:
+
+### Question 2
+Encode the following message with a Vigenere Cipher with a keyword of "ERR":
+TO ERR IS HUMAN
+
+Ciphertext:
+
+### Question 3
+Encode the following message with a Rail Fence Cipher with 3 rails:
+SAMPLE RECOVERED SUCCESSFULLY
+
+Ciphertext:
+
+### Question 4
 Decode the following message with a Rail-Fence Cipher with 3 rails:  
 GETALD AHRNHFRILTAN TOEHAW
 
 Answer: 
 
-### Question 2
+### Question 5
 Decode the following message with a Caesar Cipher with a shift of 3:  
 PHHWP HDWIU HHGRP SDUND WQRRQ
 
 Answer: 
 
-### Question 3
+### Question 6
 Decode the following message with a Vigenère Cipher with a keyword of “MOVE”:  
 NFDRS GPTBZ DIEHJ XTSAS GFOLI OMH
 
 Answer: 
 
-### Question 4
+### Question 7
 Decode the following message with a Caesar Cipher:  
 EPOIA DEEIP DALNK XHAIE POIA
 
 Answer:   
 Method: 
 
-### Question 5
+### Question 8
+Decode the following message with a Caesar Cipher:  
+VRWCV DBNDV DYCXF WFNMW NBMJH ORENY V
+
+Answer:    
+Shift: 
+
+### Question 9
+Decode the following message with a Vigenère Cipher with a keyword of "YELLOW":
+JSZVO PRLPD HWPW
+
+Answer:
+
+### Question 10
+Decode the following message with a Rail-Fence Cipher with 3 rails:   
+WECRE ERDSO EELAE AIVDV
+
+Answer: 
+
+### Question 11
+You've intercepted the following Caesar ciphertext:
+NYRKV MVIYV JRPJU FEFKK ILJKY ZD
+
+Your informants tell you the message starts with "WHAT".
+What is the shift? What is the full message?
+
+Answer (shift):
+Answer (message):
+
+### Question 12
 You’ve intercepted the following Vigenère ciphertext:  
 YIBQK GLAVL YNBQY QQVYJ TYPYM MXLJG LBNPF SHPRM XLNVL AHGUC WPRAG FA
 
@@ -61,21 +107,7 @@ What is the keyword? What is the full message?
 Answer (keyword):   
 Answer (message): 
 
-### Question 6
-Decode the following message:  
-VRWCV DBNDV DYCXF WFNMW NBMJH ORENY V
-
-Answer:    
-Method: 
-
-### Question 7
-Decode the following message:   
-WECRE ERDSO EELAE AIVDV
-
-Answer:    
-Method:
-
-### Question 8
+### Question 13
 You’ve intercepted the following ciphertext:   
 ADAXW DETXS DCIVT IWPRZ TSXUN DJGTG TPSXC VIWXH EATPH THIDE
 
@@ -85,7 +117,7 @@ What is the full message?
 Answer:    
 Method: 
 
-### Question 9
+### Question 14
 You’ve intercepted the following ciphertext:    
 NBREN UVWYF WXJNE ZERJG VUHVX BGDII VIHK
 
@@ -96,7 +128,7 @@ Answer:
 Method: 
 
 
-### Question 10
+### Question 15
 You’ve intercepted the following ciphertext:     
 WWAKTE EWHERT NOWWME KOAWEU ONHTAB NTBWAY   
 
