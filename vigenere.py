@@ -6,7 +6,7 @@ Input:
 - A Mode (encrypt (e) or decrypt (d))
 
 Output:
-- Encoded Message (each letter shifted over by corresponding letter in the keyword)
+- Encoded/decoded message (each letter shifted over by corresponding letter in the keyword)
 """
 
 def main():
@@ -38,42 +38,11 @@ def main():
         encrypt = False
     else:
         encrypt = False
+
+    # perform cipher
+    c_text = vigenere_cipher(msg, keyword, encrypt=encrypt, verbose=verbose)
     
-    ### Encoding
-
-    # for each letter in msg, shift over by corresponding letter in the key
-    c_text = ""
-    for i in range(len(msg)):
-        # which letters to use
-        l = msg[i]  # 0th letter, 1st letter, 2nd letter, etc.
-        k = keyword[i % len(keyword)]  # after last letter, wrap around to first letter
-
-        # convert to numbers
-        int_l = to_int(l)
-        int_k = to_int(k)
-
-        # sum of letter + key_letter = cipher_letter
-        if encrypt:
-            int_c = int_l + int_k  # letter + key_letter
-        else:
-            int_c = int_l - int_k  # cipher_letter - key_letter to decrypt
-        c = from_int(int_c)  # covert number to enciphered letter
-
-        # add enciphered letter to the new message
-        c_text += c  
-
-        # print steps to the user
-        if verbose:
-            if encrypt:
-                op = "+"
-            else:
-                op = "-"
-            # print(f"Encoding {l} ({int_l}) by shift {k} {int_k}")
-            print(f"{l} {op} {k} -> {c} ({int_l} {op} {int_k} -> {int_c % 26})")
-            # print(f"> {c_text}", end="\n\n")
-
     ### Output
-
     # print msg and ciphertext
     if encrypt:
         print("Plaintext: ", msg)
@@ -111,6 +80,40 @@ def from_int(int_c):
     new_letter = chr(unicode)
 
     return new_letter
+
+def vigenere_cipher(msg, keyword, encrypt=True, verbose=True):
+    # Vigenere cipher encoding/decoding
+
+    # for each letter in msg, shift over by corresponding letter in the key
+    c_text = ""
+    for i in range(len(msg)):
+        # which letters to use
+        l = msg[i]  # 0th letter, 1st letter, 2nd letter, etc.
+        k = keyword[i % len(keyword)]  # after last letter, wrap around to first letter
+
+        # convert to numbers
+        int_l = to_int(l)
+        int_k = to_int(k)
+
+        # sum of letter + key_letter = cipher_letter
+        if encrypt:
+            int_c = int_l + int_k  # letter + key_letter
+        else:
+            int_c = int_l - int_k  # cipher_letter - key_letter to decrypt
+        c = from_int(int_c)  # covert number to enciphered letter
+
+        # add enciphered letter to the new message
+        c_text += c  
+
+        # print steps to the user
+        if verbose:
+            if encrypt:
+                op = "+"
+            else:
+                op = "-"
+            # print(f"Encoding {l} ({int_l}) by shift {k} {int_k}")
+            print(f"{l} {op} {k} -> {c} ({int_l} {op} {int_k} -> {int_c % 26})")
+            # print(f"> {c_text}", end="\n\n")
 
 # run main when we run this script
 main()
