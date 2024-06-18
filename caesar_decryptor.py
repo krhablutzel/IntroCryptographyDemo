@@ -2,27 +2,80 @@
 Brute Force Caesar Cipher Decryptor
 Input:
 - An Encrypted Message (letters [a-z] and [A-Z])
+- Mode (Encrypt (e), Decrypt (d), Brute Force (b))
 
 Output:
-- Decoded Messages for each possible shift
+- Encrypt/Decrypt Mode: Encoded/decoded message
+- Brute Force Mode: Decrypted message for each possible shift
 """
 def main():
     # get message from user
     msg = input("Message: ")
     msg = clean_string_input(msg)  # clean input to contain only letters
 
+    # get mode from user
+    mode = get_mode()
+
+    # encrypt message
+    if mode == 0:
+        shift = get_shift()
+        c_text = caesar_encrypt(msg, shift, verbose=True)
+        print("Plaintext: ", msg)
+        print("Ciphertext:", c_text)
+    # decrypt message
+    elif mode == 1:
+        shift = get_shift()
+        p_text = caesar_encrypt(msg, (-1)*shift, verbose=True) # -shift to decrypt
+        print("Ciphertext:", msg)
+        print("Plaintext: ", p_text)
     # decrypt message with each potential shift
-    for shift in range(26):
-        c_text = caesar_encrypt(msg, (-1)*shift)  # -shift to decrypt
-        print("Shift: ", shift)
-        print(c_text)
-        
+    elif mode == 2:
+        for shift in range(26):
+            c_text = caesar_encrypt(msg, (-1)*shift)  # -shift to decrypt
+            print("Shift: ", shift)
+            print(c_text)
 
 def clean_string_input(msg):
     # keep only alphabetical letters (A-Z) in message
     msg = ''.join(l for l in msg if l.isalpha()).upper()
 
     return msg
+
+def get_mode():
+    # prompt user for mode (encrypt, decrypt, brute force)
+    mode_in = input("Encrypt ('e'), decrypt ('d'), or brute force decrypt ('b')?: ").lower()
+    encrypt_terms = ["e", "encrypt", "encript", "0"]
+    decrypt_terms = ["d", "decrypt", "decript", "1"]
+    brute_force_terms = ["b", "bf", "brute force", "bruteforce", "2"]
+    # try again on input if the user enters something wrong
+    while (mode_in not in encrypt_terms) and (mode_in not in decrypt_terms) and (mode_in not in brute_force_terms):
+        print('invalid mode. try again.')
+        mode_in = input("Encrypt ('e'), decrypt ('d'), or brute force decrypt ('b')?: ").lower()
+    # translate string to encrypt/decrypt/brute force mode
+    if mode_in in encrypt_terms:
+        return 0
+    elif mode_in in decrypt_terms:
+        return 1
+    elif mode_in in brute_force_terms:
+        return 2
+    else:
+        # default case - should never reach, if input cleaning succeeds
+        return 2
+
+def get_shift():
+    # get shift from user
+    shift = input("Shift: ")
+    return clean_int_input(shift)  # convert shift to number
+
+def clean_int_input(shift):
+    # convert shift from str to integer
+    if shift.replace("-", "").isnumeric():
+        shift = int(shift)
+    else:
+        # if shift isn't an integer, set default value to avoid errors
+        shift = 0
+
+    return shift
 
 def to_int(letter):
     # convert to unicode (65-90)
