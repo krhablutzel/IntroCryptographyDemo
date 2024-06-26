@@ -83,7 +83,7 @@ Answer:
 
 ### Question 10
 Decode the following message with a Rail-Fence Cipher with 3 rails:   
-WECRE ERDSO EELAE AIVDV
+WECRE ERDSOEELAE AIVDV
 
 Answer: 
 
