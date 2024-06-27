@@ -115,5 +115,7 @@ def vigenere_cipher(msg, keyword, encrypt=True, verbose=True):
             print(f"{l} {op} {k} -> {c} ({int_l} {op} {int_k} -> {int_c % 26})")
             # print(f"> {c_text}", end="\n\n")
 
+    return c_text
+
 # run main when we run this script
 main()
